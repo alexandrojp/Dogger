@@ -52,7 +52,8 @@ LOCAL_APPS = [
 
 PLUGIN_APPS = [
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
+    'oauth2_provider'
 ]
 
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + PLUGIN_APPS
