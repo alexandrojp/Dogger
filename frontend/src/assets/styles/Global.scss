@@ -1,0 +1,17 @@
+@import './Vars.scss';
+
+body {
+    background-color: $white-color;
+    font-family: $amaranth-font;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1, h2, h3 {
+    font-family: $amaranth-font;
+}
+
+p, h4, h5, h6 {
+    font-family: $open-font;
+}
+

@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from '../pages/Home';
 import SignUp from '../pages/SignUp';
 import Layout from './Layout';
-import '../assets/styles/App.scss';
+import '../assets/styles/Global.scss';
 
 const App = () => (
     <BrowserRouter>
