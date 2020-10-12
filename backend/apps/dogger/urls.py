@@ -14,6 +14,7 @@ urlpatterns = [
     path('owner/<int:pk>', OwnerDetail.as_view(), name='owner-detail'),
     path('owners/new', OwnerCreate.as_view(), name='owner-create'),
     path('owners/update/<int:pk>', OwnerUpdate.as_view(), name='owner-update'),
+    path('dogs', DogList.as_view(), name='dog-list'),
     path('dog/<int:pk>', DogDetail.as_view(), name='dog-detail'),
     path('dog/new', DogCreate.as_view(), name='dog-create'),
     path('dog/update', DogUpdate.as_view(), name='dog-update'),

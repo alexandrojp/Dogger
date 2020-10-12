@@ -1,17 +1,90 @@
 @import './Vars.scss';
 
 body {
-    background-color: $white-color;
-    font-family: $amaranth-font;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
+    font-family: 'Amaranth', sans-serif;
 }
 
-h1, h2, h3 {
-    font-family: $amaranth-font;
+h3, h2, h4, h6, a {
+    font-family: 'Amaranth', sans-serif;
+    font-weight: 900 !important;
+    color: #252D51;
 }
 
-p, h4, h5, h6 {
-    font-family: $open-font;
+.Notification {
+    background-color: #F8F2E4;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 20px;    
+    padding: 25px 50px;
 }
 
+.Notification > p {
+    margin: 0;
+}
+
+.Navbar {
+    padding: 0 60px;
+    height: 125px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Navbar__Logo > img {
+    height: 50px;
+}
+
+.Navbar__Button {
+    background-color: #252D51;
+    font-weight: 900;
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: 0;
+    color: #FFFFFF;
+}
+
+.Navbar__Button:link, .Navbar__Button:visited, .Navbar__Button:active, .Navbar__Button:hover {
+    text-decoration:none;
+    color: #FFFFFF;
+}
+
+.shadow {
+    box-shadow:  0px 2px 15px 0px rgba(100,100,100,0.5);
+}
+
+/** SCROLL **/
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+::-webkit-scrollbar-button:increment, ::-webkit-scrollbar-button {
+    display: none;
+} 
+
+::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(211,211,211,0.6);
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+.dg-modal {
+    background-color: rgba(100,100,100,0.5);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1000;
+}

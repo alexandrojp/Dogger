@@ -17,13 +17,13 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use:{
+                use: {
                     loader: "babel-loader"
                 }
             },
             {
                 test: /\.html$/,
-                use:[
+                use: [
                     {
                         loader: "html-loader"
                     }
@@ -31,7 +31,7 @@ module.exports = {
             },
             {
                 test: /\.(s*)css$/,
-                use : [
+                use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
                     },
@@ -41,7 +41,7 @@ module.exports = {
             },
             {
                 test: /\.(png|gif|jpg)$/,
-                use : [
+                use: [
                     {
                         'loader': 'file-loader',
                         options: {
@@ -55,7 +55,7 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
     },
-    plugins:[
+    plugins: [
         new HtmlWebPackPlugin({
             template: './public/index.html',
             filename: './index.html'
