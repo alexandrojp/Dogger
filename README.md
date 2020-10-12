@@ -68,11 +68,21 @@ Run project (inside the folder backend)
 (dogger) python manage.py runserver
 ```
 
-## Mockups
+## Mockups - Web
 
-Format: ![Login](https://github.com/alexandrojp/Dogger-layout/blob/master/wireframes/Web%20app/Web%20-%20Login.png)
+## **Login:** 
+![Login](https://github.com/alexandrojp/Dogger-layout/blob/master/wireframes/Web%20app/Web%20-%20Login.png)
 
-Format: ![Home owner](https://github.com/alexandrojp/Dogger-layout/blob/master/wireframes/Web%20app/Web%20-%20Onwer%20view_1.png)
+## **Home:** 
+![Home owner](https://github.com/alexandrojp/Dogger-layout/blob/master/wireframes/Web%20app/Web%20-%20Onwer%20view_1.png)
+
+## Mockups - Mobile
+
+## **Loading:**
+![loading](https://github.com/alexandrojp/Dogger-layout/blob/master/wireframes/Mobile%20app/Mobile%20-%20loading.png)
+
+## **Login:**
+![login](https://github.com/alexandrojp/Dogger-layout/blob/master/wireframes/Mobile%20app/Mobile%20-%20login.png)
 
 ## Layout
 
