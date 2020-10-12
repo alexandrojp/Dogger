@@ -3,8 +3,10 @@ from django.db import models
 
 
 class User(AbstractUser):
-    is_walker = models.BooleanField()
-    is_owner = models.BooleanField()
+    is_walker = models.BooleanField(default=False)
+    is_owner = models.BooleanField(default=False)
+    city = models.ForeignKey('City', on_delete=models.CASCADE, null=True, blank=True)
+    address = models.TextField(null=True, blank=True)
 
     class Meta:
         default_permissions = ()
@@ -18,12 +20,6 @@ class City(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class Person(models.Model):
-    city = models.ForeignKey('City', on_delete=models.CASCADE)
-    address = models.TextField()
-    user = models.OneToOneField('User', on_delete=models.CASCADE)
 
 
 class Schedule(models.Model):
@@ -60,7 +56,7 @@ class Dog(models.Model):
     name = models.CharField(max_length=70)
     size = models.PositiveSmallIntegerField(choices=DOG_SIZE)
     breed = models.CharField(max_length=100)
-    owner = models.ForeignKey('User', on_delete=models.CASCADE)
+    owner = models.ForeignKey('User', related_name='dogs', on_delete=models.CASCADE)
 
     def __str__(self):
         return '{} - Owner {}'.format(self.name, self.owner)
@@ -69,8 +65,8 @@ class Dog(models.Model):
 class Reserve(models.Model):
     hour_start = models.TimeField()
     hour_finish = models.TimeField()
-    owner = models.ForeignKey('User', on_delete=models.CASCADE)
-    walker = models.ForeignKey('User', on_delete=models.CASCADE, null=True, blank=True)
+    owner = models.ForeignKey('User', related_name='owner_reserve', on_delete=models.CASCADE)
+    walker = models.ForeignKey('User', related_name='walker_reserve', on_delete=models.CASCADE, null=True, blank=True)
     public = models.BooleanField(default=False)
     accepted = models.BooleanField(default=False)
     closed = models.BooleanField(default=False)
