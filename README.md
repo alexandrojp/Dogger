@@ -73,8 +73,29 @@ Run project (inside the folder backend)
 ## **Login:** 
 ![Login](https://github.com/alexandrojp/Dogger-layout/blob/master/wireframes/Web%20app/Web%20-%20Login.png)
 
-## **Home:** 
+## **Register:** 
+![register](https://github.com/alexandrojp/Dogger-layout/blob/master/wireframes/Web%20app/Web%20-%20Register.png)
+
+## **Home Owner:** 
 ![Home owner](https://github.com/alexandrojp/Dogger-layout/blob/master/wireframes/Web%20app/Web%20-%20Onwer%20view_1.png)
+
+## **Modal Add Dog:** 
+![add dog](https://github.com/alexandrojp/Dogger-layout/blob/master/wireframes/Web%20app/Web%20-%20Owner%20Add%20Dog_1.png)
+
+## **Modal Post Walk:**
+![post walk](https://github.com/alexandrojp/Dogger-layout/blob/master/wireframes/Web%20app/Web%20-%20Owner%20Post%20Walk.png)
+
+## **Modal Reserver Walker:**
+![reserver](https://github.com/alexandrojp/Dogger-layout/blob/master/wireframes/Web%20app/Web%20-%20Owner%20Reserver%20Walker.png)
+
+## **Home Walker:** 
+![home walker](https://github.com/alexandrojp/Dogger-layout/blob/master/wireframes/Web%20app/Web%20-%20Walker%20view.png)
+
+## **Modal Add Schedule:** 
+![add schedule](https://github.com/alexandrojp/Dogger-layout/blob/master/wireframes/Web%20app/Web%20-%20Walker%20Add%20Schedule.png)
+
+## **Modal Apply Post:** 
+![apply post](https://github.com/alexandrojp/Dogger-layout/blob/master/wireframes/Web%20app/Web%20-%20Walker%20Apply.png)
 
 ## Mockups - Mobile
 
