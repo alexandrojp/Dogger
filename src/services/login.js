@@ -1,19 +1,20 @@
-const ENDPOINT = 'http://localhost:8000';
+import { ENDPOINT } from '../settings'
 
-export default function login({ username, password }) {
+export function login({ username, password }) {
   return fetch(`${ENDPOINT}/api-token-auth/`, {
-    method: 'POST',
-    headers: {
-      "Content-Type": "application/json",
+    method: 'POST', 
+    headers: { 
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ username, password })
+    body: JSON.stringify({ username, password }),
+    redirect: 'follow',
   })
-    .then(response => response.json())
-    .then(result => {
-      const { token } = result;
-      return token;
+    .then((response) => {
+      if (!response.ok) throw new Error('Response is not OK')
+      return response.json()
     })
-    .catch(error => {
-      throw new Error('Response is not OK')
+    .then((result) => {
+      const { token } = result
+      return token
     })
 }

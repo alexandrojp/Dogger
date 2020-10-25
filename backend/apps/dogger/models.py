@@ -39,9 +39,9 @@ class Schedule(models.Model):
         dogs_size = ''
         if self.dog_small:
             dogs_size += 'small '
-        elif self.dog_medium:
+        if self.dog_medium:
             dogs_size += 'medium '
-        elif self.dog_big:
+        if self.dog_big:
             dogs_size += 'big'
 
         return '{} - {} | {}'.format(self.hour_start, self.hour_finish, dogs_size)

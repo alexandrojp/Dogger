@@ -1,38 +1,29 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import '../assets/styles/pages/Login.scss';
+import UserContext from '../../context/userContext'
+import { login } from '../../services/login';
+import './Login.scss';
 
 export default function Login() {
+  const { setJWT } = useContext(UserContext)
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
   const history = useHistory();
 
-  const fetchToken = () => {
-    fetch('http://localhost:8000/api-token-auth/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ 'username': username, 'password': password }),
-      redirect: 'follow',
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        localStorage.setItem('token', result.token);
-        history.push('/home');
-        return true;
-      })
-      .catch((error) => {
-        console.log('error', error);
-        setError(true);
-        return false;
-      });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetchToken();
+    login({ username, password}) 
+      .then(result => { 
+	sessionStorage.setItem('jwt', result)
+	setJWT(result) 
+	history.push('/home')
+      }).catch(() => {
+	sessionStorage.removeItem('jwt')
+	setError(true)
+	setJWT(null)
+	throw new Error('User or Password are not correct, please verify data.')
+      }) 
   };
 
   return (

@@ -48,7 +48,7 @@ class CityHyperlinkSerializer(serializers.HyperlinkedModelSerializer):
 class DogSerializer(serializers.ModelSerializer):
     class Meta:
         model = Dog
-        fields = '__all__'
+        fields = ('id', 'name', 'size', 'breed')
 
 
 class DogHyperlinkSerializer(serializers.HyperlinkedModelSerializer):

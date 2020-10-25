@@ -3,6 +3,7 @@ import React from 'react';
 import profile from '../../assets/static/profile.png';
 import paw from '../../assets/static/paw.png';
 import pawMidle from '../../assets/static/paw-midle.png';
+import './style.css'
 
 export default function Walker(props) {
   const {first_name, last_name} = props.walker;
